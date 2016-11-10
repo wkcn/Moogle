@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+  <title>MOOC Login</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/static/css/sweetalert2.min.css">
+</head>
+<body style="height: 100%">
+  <h1>{% if request.session.user_email %}{{ request.session.user_email }}{% else %}Not Login{% endif %}</h1>
+  <div>
+    <h2>Login</h2>
+    <input class="login" type="email" name="email" placeholder="Email" />
+    <hr>
+    <input class="login" type="password" name="password" placeholder="Password" />
+    <hr>
+    <input class="login" type="button" id="login-submit" value="Submit">
+  </div>
+
+  <div>
+    <h2>Sign Up</h2>
+    <input class="signup" type="email" name="email" placeholder="Email">
+    <hr>
+    <input class="signup" type="text" name="username" placeholder="Username">
+    <hr>
+    <input class="signup" type="password" name="password" placeholder="Password">
+    <hr>
+    <input class="signup" type="password" name="password-2" placeholder="Password Again">
+    <hr>
+    <input class="signup" type="button" id="signup-submit" value="Submit">
+  </div>
+
+  <div>
+    <a href="{% url 'logout' %}"><b>LOGOUT</b></a>  
+  </div>
+  <script type="text/javascript" src="http://cdn.css.net/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.md5.js"></script>
+  <script type="text/javascript" src="/static/js/sweetalert2.min.js"></script>
+  <script type="text/javascript" src="/static/js/base_lib.js"></script>
+  <script type="text/javascript" src="/static/js/login.js"></script>
+  <script type="text/javascript">
+    $.ajaxSetup({
+      data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+    });
+  </script>
+  <script type="text/javascript">
+    if (window.location.hostname === '127.0.0.1') {
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    }
+  </script>
+</body>
+</html>
