@@ -25,6 +25,8 @@ urlpatterns = [
     url(r'^accounts/login/?$', mooc_views.login, name='login'),
     url(r'^accounts/register/?$', mooc_views.register, name='register'),
     url(r'^accounts/logout/?$', mooc_views.logout, name='logout'),
+    # Courses
+    url(r'^courses/?$', mooc_views.courses, name='courses')
 ]
 
 

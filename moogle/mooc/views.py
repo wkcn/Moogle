@@ -3,6 +3,7 @@ from django.http import HttpResponseNotFound, HttpResponseForbidden
 from django.shortcuts import render, redirect
 from django.core.exceptions import PermissionDenied
 from .user_libs import *
+from .course_libs import *
 from .common_libs import *
 
 # Create your views here.
@@ -10,7 +11,7 @@ from .common_libs import *
 def home(request):
     return render(request, "mooc/home.html")
 
-
+# Account
 def login(request):
     if request.method == "POST":
         if login_check(request.POST.get("email"),
@@ -43,6 +44,14 @@ def logout(request):
     raise PermissionDenied
 
 
+# Course list
+def courses(request):
+    cs = get_all_courses()
+    return render(request, "mooc/courses.html", {'courses': cs})
+
+
+
+# Exception handle
 def PageNotFound(request):
     return render(request, "404.html")
 
