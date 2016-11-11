@@ -26,3 +26,15 @@ class Course(models.Model):
 
     def __str__(self):
         return "Course <%s>" % self.title
+
+
+class Lesson(models.Model):
+    title = models.CharField(max_length=256, unique=True)
+    description = models.TextField(max_length=1024, blank=True)
+    mtime = models.DateTimeField(auto_now=True)
+    ctime = models.DateTimeField(auto_now_add=True)
+    
+    course = models.ForeignKey('Course', related_name='course')
+
+    def __str__(self):
+        return "Lesson <%s>" % self.title
