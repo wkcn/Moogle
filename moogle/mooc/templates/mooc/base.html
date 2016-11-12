@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+  <title>MOOC - {% block title_name %}PAGEGEGE{% endblock %}</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/static/css/sweetalert2.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/semantic.min.js">
+  <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+  {% block stylesheet %}{% endblock %}
+</head>
+<body>
+  <div class="ui container fluid" id="top-menu">
+    <div class="ui inverted secondary pointing menu fixed">
+      <div class="ui container">
+        <a class="active item">
+          Home
+        </a>
+        <a class="item">
+          Messages
+        </a>
+        <a class="item">
+          Friends
+        </a>
+      </div>
+    </div>
+  </div>
+  {% block body_content %}
+  <div>Default content.</div>
+  {% endblock %}
+
+  <script type="text/javascript" src="http://cdn.css.net/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/static/js/jquery.md5.js"></script>
+  <script type="text/javascript" src="/static/js/sweetalert2.min.js"></script>
+  <script type="text/javascript" src="/static/js/base_lib.js"></script>
+  {% block javascript %}{% endblock %}
+  <script type="text/javascript">
+    $.ajaxSetup({
+      data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+    });
+
+    if (window.location.hostname === '127.0.0.1') {
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    }
+  </script>
+</body>
+</html>

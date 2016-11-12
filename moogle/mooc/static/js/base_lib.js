@@ -17,4 +17,11 @@ $(document).ready(function() {
       confirmButtonText: "Okay"
     });
   }
+
+  window.scroll2 = function(obj, time) {
+    $(document.body).animate({
+      scrollTop: $(obj).offset().top
+    }, time);
+  }
+
 });
