@@ -1,0 +1,77 @@
+{% extends "mooc/base.html" %}
+{% load app_filters %}
+
+{% block title_name %}
+{{course.title}}
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/static/css/course.css">
+{% endblock %}
+
+{% block body_content %}
+<div class="ui container fluid">
+  <div class="title-bg">
+  </div>
+  <div class="ui container main">
+    <div class="title">
+      <img class="title" src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+      <div class="header title">
+        <p class="header">{{course.title}}</p>
+        <p class="title">{{course.teacher}} - {{course.school}}</p>
+        <p class="title">开始时间：{{course.begin_time}}</p>
+        <p class="title">课程时长：{{course.schedule}}</p>
+      </div>
+    </div>
+
+    
+    <div class="ui segment piled">
+      <h1 class="ui header orange"><i class="icon hashtag"></i>描述</h1>
+      {{course.description | linebreaksbr}}
+    </div>
+    
+    <div class="ui segment piled">
+      <h1 class="ui header orange"><i class="icon hashtag"></i>课程小节</h1>
+      <div class="ui list">
+
+        {% for item in lessons %}
+
+        <a class="item" href="{{item.link}}" target="_blank">
+          <i class="at icon"></i>
+          <div class="content">
+            <div class="header">{{item.order | dec2hex}} - {{item.title}}</div>
+            <div class="description">{{item.description}}</div>
+          </div>
+        </a>
+
+        {% endfor %}
+      </div>
+
+    </div>
+
+    <div class="ui segment piled">
+      <h1 class="ui header orange"><i class="icon hashtag"></i>相关评论</h1>
+      <!-- 多说评论框 start -->
+      <div class="ds-thread" data-thread-key="{{course.id}}" data-title="{{course.title}}"></div>
+      <!-- 多说评论框 end -->
+      <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+      <script type="text/javascript">
+        var duoshuoQuery = {short_name:"moogle"};
+        (function() {
+          var ds = document.createElement('script');
+          ds.type = 'text/javascript';ds.async = true;
+          ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+          ds.charset = 'UTF-8';
+          (document.getElementsByTagName('head')[0] 
+           || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+      </script>
+      <!-- 多说公共JS代码 end -->
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="/static/js/course.js"></script>
+{% endblock %}

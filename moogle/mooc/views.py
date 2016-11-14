@@ -7,7 +7,6 @@ from .course_libs import *
 from .common_libs import *
 
 # Create your views here.
-@login_require
 def home(request):
     return render(request, "mooc/home.html")
 
@@ -49,6 +48,11 @@ def courses(request):
     cs = get_all_courses()
     return render(request, "mooc/courses.html", {'courses': cs})
 
+
+def course(request, _id):
+    c = get_one_course(_id)
+    ls = get_all_lesson_of(_id)
+    return render(request, "mooc/course.html", {'course': c, 'lessons': ls})
 
 
 # Exception handle

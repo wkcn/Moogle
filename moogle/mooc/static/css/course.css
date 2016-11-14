@@ -1,0 +1,44 @@
+div.title-bg {
+    height: 400px;
+}
+
+#top-menu {
+    margin-bottom: 0;
+}
+
+.container.main {
+    margin-top: -150px;
+    position: relative;
+}
+
+img.title {
+    height: 300px;
+    border-radius: 30px;
+    border: 3px solid #E8DAB2;
+}
+
+.header.title {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    font-size: 43px;
+    font-family:"Microsoft JhengHei", "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    font-weight: 300;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+
+p.title {
+    vertical-align: top;
+    color: black;
+    font-size: 24px;
+    line-height: 0px;
+}
+
+.header.title > p.title {
+    margin-top: 30px;
+}
+
+.ui.segment {
+    font-size: 1.2em;
+}

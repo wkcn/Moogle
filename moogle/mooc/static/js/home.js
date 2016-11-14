@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $(".title-bg").height(
-        $(window).height());
+        $(window).height() - $("#top-menu").height());
 
     $(".title-bg").backstretch([
         "/static/img/home-bg-0.jpg",
@@ -25,8 +25,19 @@ $(document).ready(function() {
     });
 
     //scroll to top when focus input main-search
-    $("input.main-search").click(function() {
-        window.scroll2("body", 600);
+    window.click2("input.main-search", "body", 600);
+    window.click2(".to.top", ".title-bg", 600, 60);
+    window.click2(".to.jptj", "#jptj", 600, 60);
+    window.click2(".to.jckc", "#jckc", 600, 60);
+
+    // fix daohanglan
+    $(window).scroll(function() {
+        let sc = $(this).scrollTop();
+        if(sc > $(window).height() - $("div.daohanglan").height()) {
+            $("div.daohanglan").addClass("fixed");
+        } else {
+            $("div.daohanglan").removeClass("fixed");
+        }
     });
 
 });

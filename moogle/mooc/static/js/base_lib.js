@@ -18,10 +18,16 @@ $(document).ready(function() {
     });
   }
 
-  window.scroll2 = function(obj, time) {
+  window.scroll2 = function(selector, time, offset=0) {
     $(document.body).animate({
-      scrollTop: $(obj).offset().top
+      scrollTop: $(selector).offset().top - offset
     }, time);
+  }
+
+  window.click2 = function(selector, target, time, offset=0) {
+    $(selector).click(function() {
+      window.scroll2(target, time, offset);
+    })
   }
 
 });

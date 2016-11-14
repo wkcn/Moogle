@@ -1,19 +1,35 @@
+@font-face {
+    font-family: 'OuTiKaiShu';
+    src: url('/static/font/OuTiKaiShu.otf');
+}
+
 html, body {
     height: 100%;
+}
+
+* {
+    font-family:"Microsoft JhengHei", "Microsoft YaHei",Arial,Helvetica,sans-serif;
 }
 
 #top-menu {
     border-radius: 0;
     /*padding-bottom: 1px;*/
-    margin-bottom: 0;
-}
-
-#top-menu > .menu.fixed {
-    background-color: rgba(0,0,0,0.2);
-    transition: background-color 0.3s;
+    /*background-color: rgba(251,248,240,0.2);*/
+    background-color: rgba(221,120,79,0.8);
+    /*transition: background-color 0.3s;*/
     border: none;
 }
 
-#top-menu > .menu.fixed:hover {
-    background-color: rgba(0,0,0,0.6);
+footer {
+    height: 160px;
+    background-color: rgba(221,120,79,0.8);
+    margin-top: 30px;
+}
+
+a:hover {
+    color: rgba(221,120,79,0.8);
+}
+
+a *:hover {
+    color: rgba(221,120,79,0.8);
 }

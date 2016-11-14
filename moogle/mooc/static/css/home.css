@@ -1,13 +1,62 @@
+
 div.title-bg {
     width: 100%;
+    font-family: Georgia, SimSun, 'OuTiKaiShu';
 }
 
 .ui.row.main-search {
-    margin-top: 0px;
+    /*margin-top: 0px;*/
 }
 
 span.web-name {
     font-size: 7em;
     font-weight: 800;
     color: white;
+}
+
+/* 导航栏 */
+div.daohanglan:not(.fixed) {
+    width: 100%;
+    height: 66px;
+    background-color: rgba(221,120,79,0.6);
+    margin-top: -66px;
+    z-index: 100;
+    position: relative;
+}
+
+/* 导航按钮 */
+.column.dao {
+    height: 66px;
+    /*padding: 8px 15px;*/
+    text-align: center;
+    font-family:"Microsoft JhengHei", "Microsoft YaHei",Arial,Helvetica,sans-serif;
+    font-weight: 300;
+    font-size: 46px;
+    letter-spacing: 10px;
+    vertical-align: top;
+    transition: background-color 0.3s;
+    cursor: default;
+    color: #F2E7C9;
+    line-height: 32px;
+}
+
+.column.dao:hover {
+    background-color: rgba(221,110,66,0.4);
+}
+
+div.daohanglan.fixed {
+    width: 100%;
+    height: 66px;
+    background-color: rgba(221,120,79,0.6);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+}
+
+div.daohanglan.fixed .container {
+    margin-top: 0px;
+}
+
+div.daohanglan.fixed .grid {
+    margin: 0;
 }
