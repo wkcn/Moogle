@@ -3,10 +3,6 @@ div.title-bg {
     font-family: Georgia, SimSun, 'OuTiKaiShu';
 }
 
-.ui.row.main-search {
-    /*margin-top: 0px;*/
-}
-
 span.web-name {
     font-size: 7em;
     font-weight: 800;
@@ -40,7 +36,8 @@ div.daohanglan:not(.fixed) {
 }
 
 .column.dao:hover {
-    background-color: rgba(221,110,66,0.4);
+    /*background-color: rgba(221,110,66,0.4);*/
+    border-bottom: 5px solid rgb(221,110,66);
 }
 
 div.daohanglan.fixed {
@@ -58,9 +55,4 @@ div.daohanglan.fixed .container {
 
 div.daohanglan.fixed .grid {
     margin: 0;
-}
-
-/* title color */
-span.orange {
-    color: rgba(221,120,79,0.9);
 }

@@ -3,22 +3,29 @@
 <head>
   <title>{% block title_name %}Moogle{% endblock %}</title>
   <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/png" href="/static/img/round-M-logo.png"/>
+
   <link rel="stylesheet" type="text/css" href="/static/css/sweetalert2.min.css">
   <link rel="stylesheet" type="text/css" href="/static/css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="/static/css/semantic.min.js">
   <link rel="stylesheet" type="text/css" href="/static/css/base.css">
+
   {% block stylesheet %}{% endblock %}
 </head>
 <body>
   <div class="ui secondary pointing menu huge" id="top-menu">
     <div class="ui container">
       <a class="item" href="/">
-        <b>MOOGLE</b>
+        <b><span class="orange">M</span>OOGLE</b>
       </a>
       <a class="item">
         所有课程
       </a>
+      <div class="item header right">
+        <img src="/static/img/round-M-logo.png" class="logo">
+      </div>
 
+      <!--
       {% if request.session.user_email %}
       <a class="item right">
         {{request.session.user_email}}
@@ -28,6 +35,7 @@
         LOGIN
       </a>
       {% endif %}
+      -->
 
     </div>
   </div>
@@ -35,7 +43,21 @@
   <div>Default content.</div>
   {% endblock %}
 
-  <footer></footer>
+  <footer>
+    <span class="line six PLATINUM"></span><span class="line one CAMBRIDGE"></span><span class="line one BLOND"></span><span class="line one TERRA"></span><span class="line one PLATINUM"></span>
+    <div class="ui container text">
+      <div class="ui grid">
+        <div class="column five wide">
+          <img src="/static/img/team.png" class="ui fluid image"/>
+        </div>
+        <div class="column eleven wide info">
+        <div class="ui row names"><a href="http://www.leezing.com" target="_blank">Zing Lee</a> · <a href="http://blog.csdn.net/littlecuter" target="_blank">ST.Zinc</a> · <a href="https://github.com/WKCN" target="_blank">JackieWu</a></div>
+        <div class="ui row copyright">Copyright &copy; 2016 与黑恶势力共同开发 · <a href="https://moogle.mit-license.org/" target="_blank">The MIT License (MIT)</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <script type="text/javascript" src="http://cdn.css.net/libs/jquery/3.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="/static/js/jquery.md5.js"></script>

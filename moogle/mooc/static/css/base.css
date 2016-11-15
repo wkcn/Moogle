@@ -14,17 +14,20 @@ html, body {
 #top-menu {
     border-radius: 0;
     /*padding-bottom: 1px;*/
-    /*background-color: rgba(251,248,240,0.2);*/
+    /*background-color: rgba(221,120,79,0.2);*/
     /*background-color: #9CAFB7;*/
-    background-color: white;
     /*transition: background-color 0.3s;*/
     /*border: none;*/
 }
 
-footer {
-    height: 160px;
-    background-color: rgba(221,120,79,0.8);
-    margin-top: 30px;
+#top-menu .item.header {
+    padding: 1px 0;
+}
+
+
+/* title color */
+span.orange {
+    color: rgba(221,120,79,0.9);
 }
 
 a:link, a:visited,
@@ -38,4 +41,59 @@ a:hover {
 
 a *:hover {
     color: rgba(221,120,79,0.8);
+}
+
+/*footer*/
+footer {
+    background-color: rgba(92,164,169,0.8);
+    margin-top: 30px;
+}
+
+footer .info {
+    text-align: center;
+}
+
+footer .names {
+    font-size: 1.5em;
+    font-weight: 350;
+}
+
+footer .copyright {
+    font-size: 0.9em;
+}
+
+footer .line {
+    height: 18px;
+    display: inline-block;
+    top: 0;
+    margin-bottom: 10px;
+}
+
+footer .six {
+    width: 60%;
+}
+
+footer .one {
+    width: 10%;
+}
+
+footer img {
+    padding-right: 40px;
+    border-right: 8px solid #E6EBE0;
+}
+
+footer .CAMBRIDGE {
+    background-color: #9BC1BC;
+}
+
+footer .PLATINUM {
+    background-color: #E6EBE0;
+}
+
+footer .BLOND {
+    background-color: #F4F1BB;
+}
+
+footer .TERRA {
+    background-color: #ED6A5A;
 }

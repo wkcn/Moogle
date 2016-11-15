@@ -43,4 +43,9 @@ $(document).ready(function() {
     window.location.href = "/search?key=" + keyword ;
   })
 
+  // footer style
+  $("footer .names").css({
+    "margin-top": $("footer").height()/2 - $("footer .names").height() - $("footer .copyright").height()
+  });
+
 });

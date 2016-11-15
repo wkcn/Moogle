@@ -26,9 +26,9 @@ $(document).ready(function() {
 
     //scroll to top when focus input main-search
     window.click2("input.main-search", "body", 600);
-    window.click2(".to.top", ".title-bg", 600, 60);
-    window.click2(".to.jptj", "#jptj", 600, 60);
-    window.click2(".to.jckc", "#jckc", 600, 60);
+    window.click2(".to.top", ".title-bg", 600, 70);
+    window.click2(".to.jptj", "#jptj", 600, 70);
+    window.click2(".to.jckc", "#jckc", 600, 70);
 
     // fix daohanglan
     $(window).scroll(function() {
