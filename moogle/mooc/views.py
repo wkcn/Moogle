@@ -55,6 +55,16 @@ def course(request, _id):
     return render(request, "mooc/course.html", {'course': c, 'lessons': ls})
 
 
+# Search
+def search(request):
+    keyword = request.GET.get("key")
+    cs = get_search_course(keyword)
+    return render(request, "mooc/search.html", {
+        'courses': cs,
+        'keyword': keyword
+        })
+
+
 # Exception handle
 def PageNotFound(request):
     return render(request, "404.html")

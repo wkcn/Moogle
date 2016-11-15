@@ -14,13 +14,20 @@
   <div class="title-bg">
   </div>
   <div class="ui container main">
-    <div class="title">
-      <img class="title" src="http://semantic-ui.com/images/avatar2/large/matthew.png">
-      <div class="header title">
-        <p class="header">{{course.title}}</p>
-        <p class="title">{{course.teacher}} - {{course.school}}</p>
-        <p class="title">开始时间：{{course.begin_time}}</p>
-        <p class="title">课程时长：{{course.schedule}}</p>
+    <div class="ui grid title">
+      <div class="column four wide">
+        <img class="ui image fluid title" src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+      </div>
+
+      <div class="column twelve wide">
+        <div class="row title header">
+          <div class="header title">{{course.title}}</div>
+        </div>
+        <div class="row info title">
+          <p class="title">{{course.teacher}} - {{course.school}}</p>
+          <p class="title">开始时间：{{course.begin_time}}</p>
+          <p class="title">课程时长：{{course.schedule}}</p>
+        </div>
       </div>
     </div>
 

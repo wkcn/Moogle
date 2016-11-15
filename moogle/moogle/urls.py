@@ -28,6 +28,8 @@ urlpatterns = [
     # Courses
     url(r'^courses/?$', mooc_views.courses, name='courses'),
     url(r'^course/(\d+)?$', mooc_views.course, name='course'),
+    # Search
+    url(r'^search/?$', mooc_views.search, name='search'),
 ]
 
 

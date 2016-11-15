@@ -12,4 +12,7 @@ def get_one_course(_id):
     return get_object_or_404(Course, id=_id)
 
 def get_all_lesson_of(_id):
-    return get_object_or_404(Course, id=_id).course.all()
+    return get_object_or_404(Course, id=_id).lesson.all()
+
+def get_search_course(keyword):
+    return Course.objects.filter(title__icontains = keyword)

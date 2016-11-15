@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import User, Course, Lesson
+from .models import User, Course, Lesson, Classification
 
 # Register your models here.
 
@@ -16,3 +16,4 @@ class LessonAdmin(admin.ModelAdmin):
 admin.site.register(User)
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson, LessonAdmin)
+admin.site.register(Classification)

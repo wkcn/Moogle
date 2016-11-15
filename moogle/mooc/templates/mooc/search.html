@@ -1,0 +1,63 @@
+{% extends "mooc/base.html" %}
+
+{% block title_name %}
+Search Result of '{{keyword}}'
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/static/css/search.css">
+{% endblock %}
+
+{% block body_content %}
+<div class="ui container fluid">
+  <div class="title-bg">
+    <div class="ui grid">
+      <div class="ui row search">
+        <div class="column five wide"></div>
+        <div class="column six wide">
+          <div class="ui icon input big fluid">
+            <input class="main-search" type="text" placeholder="寻找感兴趣" value="{{keyword}}">
+            <i class="inverted circular search link icon orange" id="main-search-btn"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui divider hidden"></div>
+
+<div class="ui container">
+  <h5 class="ui header">
+    <i class="find icon orange"></i>共有 {{courses | length}} 条匹配记录。{% if not courses %}试试缩短关键词？{% endif %}
+  </h5>
+  <div class="ui five link cards">
+    {% for item in courses %}
+    <div class="card orange">
+      <div class="image">
+        <img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+      </div>
+      <div class="content">
+        <div class="header"><a href="/course/{{item.id}}">{{item.title}}</a></div>
+        <div class="meta">
+          <a>网络</a>
+        </div>
+        <div class="description">
+          {{item.description | truncatechars:20}}
+        </div>
+      </div>
+      <div class="extra content">
+        <span class="right floated">
+          {{item.schedule | default:"无时间安排"}}
+        </span>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="/static/js/search.js"></script>
+{% endblock %}

@@ -26,6 +26,8 @@ class Course(models.Model):
     begin_time = models.CharField(max_length=128, blank=True)
     schedule = models.CharField(max_length=128, blank=True)
 
+    classification = models.ForeignKey('Classification', related_name='course')
+
     def __str__(self):
         return "Course <%s>" % self.title
 
@@ -38,7 +40,13 @@ class Lesson(models.Model):
     link = models.CharField(max_length=256, blank=True)
     order = models.IntegerField(default=-1)
     
-    course = models.ForeignKey('Course', related_name='course')
+    course = models.ForeignKey('Course', related_name='lesson')
 
     def __str__(self):
         return "Lesson <%s>" % self.title
+
+class Classification(models.Model):
+    name = models.CharField(max_length=128, unique=True)
+
+    def __str__(self):
+        return "%s" % self.name

@@ -15,9 +15,10 @@ html, body {
     border-radius: 0;
     /*padding-bottom: 1px;*/
     /*background-color: rgba(251,248,240,0.2);*/
-    background-color: rgba(221,120,79,0.8);
+    /*background-color: #9CAFB7;*/
+    background-color: white;
     /*transition: background-color 0.3s;*/
-    border: none;
+    /*border: none;*/
 }
 
 footer {
@@ -26,8 +27,13 @@ footer {
     margin-top: 30px;
 }
 
+a:link, a:visited,
+a:focus {
+    color: black !important;
+}
+
 a:hover {
-    color: rgba(221,120,79,0.8);
+    color: rgba(221,120,79,0.8) !important;
 }
 
 a *:hover {

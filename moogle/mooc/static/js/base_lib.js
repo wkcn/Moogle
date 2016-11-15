@@ -30,4 +30,17 @@ $(document).ready(function() {
     })
   }
 
+  // search box events
+
+  $("input.main-search").keyup(function(event) {
+    if(event.keyCode == 13) {
+      $("#main-search-btn").click();
+    }
+  });
+
+  $("#main-search-btn").click(function() {
+    let keyword = $("input.main-search").val();
+    window.location.href = "/search?key=" + keyword ;
+  })
+
 });
