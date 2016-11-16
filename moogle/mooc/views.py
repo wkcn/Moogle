@@ -8,7 +8,14 @@ from .common_libs import *
 
 # Create your views here.
 def home(request):
-    return render(request, "mooc/home.html")
+    # 精品推荐
+    jptj = get_four_courses_of("jptj")
+    # 基础课程
+    jckc = get_four_courses_of("jckc")
+    return render(request, "mooc/home.html", {
+            "jckc": jckc,
+            "jptj": jptj,
+        })
 
 # Account
 def login(request):

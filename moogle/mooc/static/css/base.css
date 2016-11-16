@@ -47,6 +47,7 @@ a *:hover {
 footer {
     background-color: rgba(92,164,169,0.8);
     margin-top: 30px;
+    width: 100vw;
 }
 
 footer .info {

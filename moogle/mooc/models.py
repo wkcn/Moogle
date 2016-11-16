@@ -25,6 +25,7 @@ class Course(models.Model):
     mark_num = models.IntegerField(default=0)
     begin_time = models.CharField(max_length=128, blank=True)
     schedule = models.CharField(max_length=128, blank=True)
+    image = models.CharField(max_length=256, default='http://ogqprkml5.bkt.clouddn.com/public/16-11-16/90666112.jpg-square')
 
     classification = models.ForeignKey('Classification', related_name='course')
 
@@ -47,6 +48,7 @@ class Lesson(models.Model):
 
 class Classification(models.Model):
     name = models.CharField(max_length=128, unique=True)
+    pinyin = models.CharField(max_length=64, blank=True)
 
     def __str__(self):
         return "%s" % self.name

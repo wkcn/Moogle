@@ -48,4 +48,10 @@ $(document).ready(function() {
     "margin-top": $("footer").height()/2 - $("footer .names").height() - $("footer .copyright").height()
   });
 
+  if($("footer").offset().top + $("footer").height() < $(window).height()) {
+    $("footer").css({
+      "margin-top": $(window).height() - $("footer").offset().top - $("footer").height() + 30
+    })
+  }
+
 });

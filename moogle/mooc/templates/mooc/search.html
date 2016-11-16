@@ -29,18 +29,18 @@ Search Result of '{{keyword}}'
 
 <div class="ui container">
   <h5 class="ui header">
-    <i class="find icon orange"></i>共有 {{courses | length}} 条匹配记录。{% if not courses %}试试缩短关键词？{% endif %}
+    <i class="find icon orange"></i>共有 {{courses | length}} 条匹配记录。{% if not courses %}试试更精确的关键词？{% endif %}
   </h5>
   <div class="ui five link cards">
     {% for item in courses %}
     <div class="card orange">
       <div class="image">
-        <img src="http://semantic-ui.com/images/avatar2/large/matthew.png">
+        <img src="{{item.image}}">
       </div>
       <div class="content">
         <div class="header"><a href="/course/{{item.id}}">{{item.title}}</a></div>
         <div class="meta">
-          <a>网络</a>
+          <a>{{item.classification.name}}</a>
         </div>
         <div class="description">
           {{item.description | truncatechars:20}}
