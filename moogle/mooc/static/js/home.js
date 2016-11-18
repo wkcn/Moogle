@@ -29,6 +29,7 @@ $(document).ready(function() {
     window.click2(".to.top", ".title-bg", 600, 70);
     window.click2(".to.jptj", "#jptj", 600, 70);
     window.click2(".to.jckc", "#jckc", 600, 70);
+    window.click2(".to.gjjj", "#gjjj", 600, 70);
 
     // fix daohanglan
     $(window).scroll(function() {

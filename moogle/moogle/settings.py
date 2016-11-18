@@ -26,7 +26,7 @@ SECRET_KEY = 'oz0unb9#83@-2drbs8z7^mj97nb+xhn65^%y9xk)*e40m%yqj!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["moogle.leezing.com", "127.0.0.1"]
 
 
 # Application definition

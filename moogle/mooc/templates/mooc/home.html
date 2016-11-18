@@ -34,6 +34,7 @@ Home
         <div class="column dao to top">首页</div>
         <div class="column dao to jptj">精品推荐</div>
         <div class="column dao to jckc">基础课程</div>
+        <div class="column dao to gjjj">高级进阶</div>
       </div>
     </div>
   </div>
@@ -103,6 +104,32 @@ Home
 
     <div class="ui four link cards orange">
       {% for item in jckc %}
+      <div class="card orange">
+        <div class="image">
+          <img src="{{item.image}}">
+        </div>
+        <div class="content">
+          <div class="header"><a href="/course/{{item.id}}">{{item.title}}</a></div>
+          <div class="description">
+            {{item.description | truncatechars:20}}
+          </div>
+        </div>
+        <div class="extra content">
+          <span class="right floated">
+            {{item.schedule | default:"无时间安排"}}
+          </span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h1 class="ui horizontal divider header" id="gjjj">
+      <i class="tag icon"></i>
+      高级进阶
+    </h1>
+
+    <div class="ui four link cards orange">
+      {% for item in gjjj %}
       <div class="card orange">
         <div class="image">
           <img src="{{item.image}}">
