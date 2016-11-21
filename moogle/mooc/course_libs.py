@@ -20,5 +20,21 @@ def get_search_course(keyword):
 def get_four_courses_of(name):
     return get_object_or_404(Classification, name=name).course.all()[:4]
 
+def get_courses_of(name):
+    return get_object_or_404(Classification, name=name).course.all()[:4]
+
 def get_home_numbers():
     return 0,1,2
+
+def courses_to_json_str(courses):
+    return [(lambda c: {
+            'title': c.title,
+            'description': c.description,
+            'teacher': c.teacher,
+            'school': c.school,
+            'mark_num': c.mark_num,
+            'begin_time': c.begin_time,
+            'schedule': c.schedule,
+            'image': c.image,
+            'classification': c.classification.name,
+        })(c) for c in courses]

@@ -1,0 +1,52 @@
+{% extends "mooc/base.html" %}
+
+{% block title_name %}
+Classification
+{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="/static/css/components/shape.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/classification.css">
+{% endblock %}
+
+{% block body_content %}
+<div class="ui container fluid">
+  <div class="title-bg">
+    <div class="ui container">
+      <div class="ui grid">
+        <div class="ui row classification">
+          <div class="column six wide">
+          <h1 class="classification">查看分类 
+              <div class="ui text shape">
+                <div class="sides">
+                  <div class="ui header side active">全部课程</div>
+                  <div class="ui header side">精品推荐</div>
+                  <div class="ui header side">基础课程</div>
+                  <div class="ui header side">高级进阶</div>
+                </div>
+              </div>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui divider hidden"></div>
+
+<div class="ui container result">
+
+  <h5 class="ui header result num">
+    <i class="find icon orange"></i>
+    共有 0 门课程。
+  </h5>
+  <div class="ui five link cards">
+  </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="/static/css/components/shape.min.js"></script>
+<script type="text/javascript" src="/static/js/classification.js"></script>
+{% endblock %}

@@ -30,6 +30,8 @@ urlpatterns = [
     url(r'^course/(\d+)?$', mooc_views.course, name='course'),
     # Search
     url(r'^search/?$', mooc_views.search, name='search'),
+    url(r'^classification/?$', mooc_views.classification, name='classification'),
+    url(r'^get_classi_courses/?$', mooc_views.get_classi_courses, name='get_classi_courses'),
 ]
 
 

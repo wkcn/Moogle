@@ -69,6 +69,20 @@ def search(request):
         })
 
 
+def classification(request):
+    return render(request, "mooc/classification.html")
+
+
+def get_classi_courses(request):
+    cl = request.GET.get("cl")
+    if cl == u'全部课程':
+        cs = get_all_courses()
+    else:
+        cs = get_courses_of(cl)
+    text = render(request, "mooc/classes.html",{'courses': cs}).getvalue().decode("utf-8")
+    return json_res(False, {'text' : text, 'num' : len(cs)})
+
+
 # Exception handle
 def PageNotFound(request):
     return render(request, "404.html")
