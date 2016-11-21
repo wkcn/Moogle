@@ -8,6 +8,7 @@
   <link rel="stylesheet" type="text/css" href="/static/css/sweetalert2.min.css">
   <link rel="stylesheet" type="text/css" href="/static/css/semantic.min.css">
   <link rel="stylesheet" type="text/css" href="/static/css/semantic.min.js">
+  <link rel="stylesheet" type="text/css" href="/static/css/link_component.css">
   <link rel="stylesheet" type="text/css" href="/static/css/base.css">
 
   {% block stylesheet %}{% endblock %}
@@ -42,6 +43,14 @@
   {% block body_content %}
   <div>Default content.</div>
   {% endblock %}
+
+  <div class="scroll-to-top to top">
+    <nav class="cl-effect-5" id="cl-effect-5">
+      <a>
+        <span data-hover="TOP">TOP</span>
+      </a>
+    </nav>
+  </div>
 
   <footer>
     <span class="line six PLATINUM"></span><span class="line one CAMBRIDGE"></span><span class="line one BLOND"></span><span class="line one TERRA"></span><span class="line one PLATINUM"></span>

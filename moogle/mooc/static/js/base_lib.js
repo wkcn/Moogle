@@ -54,4 +54,13 @@ $(document).ready(function() {
     })
   }
 
+  $(window).scroll(function() {
+    if($(this).scrollTop() > 300) {
+      $(".scroll-to-top").fadeIn();
+    } else {
+      $(".scroll-to-top").hide();
+    }
+  });
+
+  window.click2(".to.top", "#top-menu", 190, 0);
 });

@@ -17,8 +17,8 @@ def get_all_lesson_of(_id):
 def get_search_course(keyword):
     return Course.objects.filter(title__icontains = keyword)
 
-def get_four_courses_of(pinyin):
-    return get_object_or_404(Classification, pinyin=pinyin).course.all()[:4]
+def get_four_courses_of(name):
+    return get_object_or_404(Classification, name=name).course.all()[:4]
 
 def get_home_numbers():
     return 0,1,2

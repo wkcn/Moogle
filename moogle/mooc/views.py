@@ -9,9 +9,9 @@ from .common_libs import *
 # Create your views here.
 def home(request):
     return render(request, "mooc/home.html", {
-            "jckc": get_four_courses_of("jckc"),
-            "jptj": get_four_courses_of("jptj"),
-            "gjjj": get_four_courses_of("gjjj"),
+            "jckc": get_four_courses_of("基础课程"),
+            "jptj": get_four_courses_of("精品推荐"),
+            "gjjj": get_four_courses_of("高级进阶"),
         })
 
 # Account
